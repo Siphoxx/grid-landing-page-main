@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Grid landing page</title>
+</head>
+<body>
+  <main>
+    <header>
+      <nav>
+        <div class="logoitems">
+          <svg height="16" width="16" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle r="50" cx="50" cy="50" fill="white" />
+          </svg>
+          <p>Bridge Collective</p>
+        </div>
+        <button id="hamburger-btn" aria-label="Toggle Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+    <div id="menu" class="hidden">       
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  </div>
+       
+      </nav>
+    </header>
+
+    <section class="bigsection">
+      <h2>A classroom<br>for every child.</h2>
+      <p>
+        We fund the schools, train the teachers, and 
+        measure what works — so every child we reach 
+        today becomes a graduate tomorrow.
+      </p>
+    </section>
+
+    <section class="topsection">
+      <div class="stat-card">
+        <div class="stat-top">
+          <img src="assets/images/icon-sparkle.svg" alt="" class="stat-icon">
+          <span class="stat-number">2.4M</span>
+        </div>
+        <div class="stat-bottom">
+          <h4 class="stat-label">Students reached</h4>
+          <p class="stat-desc">Across 31 countries since 2011.</p>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-top">
+          <img src="assets/images/icon-plus.svg" alt="" class="stat-icon">
+          <span class="stat-number">1,284</span>
+        </div>
+        <div class="stat-bottom">
+          <h4 class="stat-label">Schools partnered</h4>
+          <p class="stat-desc">In 14 countries, from Kenya to Guatemala.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bottomsection">
+      <div class="stat-card">
+        <div class="stat-top">
+          <img src="assets/images/icon-arrow-right.svg" alt="" class="stat-icon">
+          <span class="stat-number">38K</span>
+        </div>
+        <div class="stat-bottom">
+          <h4 class="stat-label">Teachers trained</h4>
+          <p class="stat-desc">Equipped with modern tools and methodology.</p>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-top">
+          <img src="assets/images/icon-trending-up.svg" alt="" class="stat-icon">
+          <span class="stat-number">3.1x</span>
+        </div>
+        <div class="stat-bottom">
+          <h4 class="stat-label">Graduation lift</h4>
+          <p class="stat-desc">Partner schools outperform national averages 3x.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p id="dayofweek">© 2026 Bridge Collective</p>
+      <p>Registered charity 12345678</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
