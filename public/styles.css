@@ -122,11 +122,41 @@ nav {
   margin-bottom: 3rem;
 }
 
-.stat-icon {
-  width: 24px;
-  height: 24px;
+/* Style the button wrapper */
+.stat-btn {
+  width: 48px;                 /* Outer size of the button box */
+  height: 48px;
+  background: hsla(228, 99%, 58%, 1); /* Your exact blue color */
+  border: none;
+  border-radius: 4px;          /* Optional: slightly rounded corners like the image */
+  cursor: pointer;
   opacity: 0.9;
+  
+  /* Flexbox centers the plus icon perfectly inside the box */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease, transform 0.1s ease;
 }
+
+/* Style the internal SVG icon */
+.stat-icon {
+  width: 24px;                 /* Size of the internal plus symbol */
+  height: 24px;
+  display: block;
+}
+
+/* Hover and Click feedback states */
+.stat-btn:hover {
+  background: hsla(228, 99%, 48%, 1);
+}
+
+.stat-btn:active {
+  transform: scale(0.95);     /* Subtle shrink effect when clicked */
+}
+
+
+
 
 .stat-number {
   font-size: 2.5rem;
