@@ -23,8 +23,8 @@ body {
 /* --- 2. Main Grid Layout --- */
 main {
   display: grid;
-  grid-template-columns: 1.2fr 1fr; /* Left column is wider than right */
-  grid-template-rows: auto 1fr 1fr auto;
+   grid-template-columns: 1.2fr 1fr;/* Left column is wider than right */
+  grid-template-rows: auto 1fr 1fr auto auto; 
   background-color: hsla(228, 99%, 58%, 1);
   color: white;
   max-width: 1100px;
@@ -187,7 +187,7 @@ nav {
 /* --- 7. Footer --- */
 footer {
   grid-column: 1 / -1;
-  grid-row: 4 / 5;
+    grid-row: 5 / 6; 
   border-top: 1px solid hsla(0, 0%, 100%, 0.15);
   padding: 1.5rem 2.5rem;
   display: flex;
@@ -250,4 +250,52 @@ footer {
   display: grid;
   /* Change this line! */
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); 
+}
+
+/* --- Admin Form --- */
+.admin-section {
+  grid-column: 1 / -1;
+  grid-row: 4 / 5; /* Puts it on row 4, above the footer */
+  padding: 2rem 2.5rem;
+  background-color: hsla(228, 99%, 48%, 1); /* Slightly darker blue */
+  border-top: 1px solid hsla(0, 0%, 100%, 0.15);
+}
+
+.admin-section h3 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+#admin-form {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+#admin-form input {
+  padding: 0.6rem;
+  border-radius: 4px;
+  border: 1px solid hsla(0, 0%, 100%, 0.3);
+  background-color: hsla(228, 99%, 58%, 1);
+  color: white;
+  font-family: inherit;
+}
+
+#admin-form input::placeholder {
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+#admin-form button {
+  padding: 0.6rem 1.2rem;
+  background-color: white;
+  color: hsla(228, 99%, 48%, 1);
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#admin-form button:hover {
+  background-color: #e5e5e5;
 }

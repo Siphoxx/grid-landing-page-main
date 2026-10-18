@@ -96,3 +96,43 @@ statsButtonStudents.addEventListener("click", fetchStats);
 statsButtonSchools.addEventListener("click", fetchStats);
 statsButtonTeacher.addEventListener("click", fetchStats);
 statsButtonGraduation.addEventListener("click", fetchStats);
+
+
+
+//  // ===== Admin Form Submit =====
+const adminForm = document.querySelector("#admin-form");
+
+adminForm.addEventListener("submit", async (event) => {
+  event.preventDefault(); // Stops the page from reloading
+   console.log("Form submitted!"); // <-- ADD THIS LINE
+
+  // 1. Gather the numbers from the inputs
+  const newStats = {
+    studentsReached: Number(document.querySelector("#input-students").value),
+    schoolsPartnered: Number(document.querySelector("#input-schools").value),
+    teachersTrained: Number(document.querySelector("#input-teachers").value),
+    graduationLift: Number(document.querySelector("#input-graduation").value)
+  };
+
+  try {
+    // 2. Send a POST request to your Node.js server
+    const response = await fetch("/api/stats", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(newStats)
+    });
+
+    if (!response.ok) throw new Error("Failed to update stats");
+
+    // 3. If successful, re-fetch to trigger the animation and clear the form
+    fetchStats(); 
+    adminForm.reset(); 
+    alert("Database updated successfully!");
+
+  } catch (error) {
+    console.error("Error updating stats:", error);
+    alert("Failed to update database.");
+  }
+});
+
+
