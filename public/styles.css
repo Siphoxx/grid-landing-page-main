@@ -299,3 +299,70 @@ footer {
 #admin-form button:hover {
   background-color: #e5e5e5;
 }
+
+/* =========================================
+   MOBILE RESPONSIVENESS (Screens < 768px)
+   ========================================= */
+@media (max-width: 768px) {
+  
+  /* 1. Remove outer margins so the app goes edge-to-edge */
+  body {
+    padding: 0;
+  }
+
+  main {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    /* Change from 2 columns to 1 column */
+    grid-template-columns: 1fr; 
+    /* Let the grid auto-size the rows */
+    grid-template-rows: auto; 
+  }
+
+  /* 2. Make every section span the full width */
+  header, .bigsection, .topsection, .bottomsection, .admin-section, footer {
+    grid-column: 1 / -1;
+    grid-row: auto; 
+  }
+
+  /* 3. Fix the Hero Section borders and padding */
+  .bigsection {
+    border-right: none;
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.15);
+    padding: 3rem 2rem;
+  }
+
+  .bigsection h2 {
+    font-size: 2.5rem; /* Smaller headline for mobile */
+  }
+
+  /* 4. Stack the 2x2 Stats into a single vertical column */
+  .topsection, .bottomsection {
+    grid-template-columns: 1fr; 
+  }
+
+  .topsection {
+    border-bottom: none; 
+  }
+
+  /* 5. Fix the Stat Cards */
+  .stat-card {
+    border-right: none;
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.15);
+  }
+
+  /* Remove the border from the last card */
+  .bottomsection .stat-card:last-child {
+    border-bottom: none;
+  }
+
+  /* 6. Stack the footer text */
+  footer {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    text-align: center;
+  }
+}
