@@ -109,6 +109,8 @@ nav {
   justify-content: space-between;
   padding: 2.5rem 2rem;
   border-right: 1px solid hsla(0, 0%, 100%, 0.15);
+  /* Add this line! */
+  min-width: 0; 
 }
 
 .stat-card:last-child {
@@ -120,11 +122,14 @@ nav {
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 3rem;
+
+  width: 100%; 
+  gap: 1rem;
 }
 
 /* Style the button wrapper */
 .stat-btn {
-  width: 48px;                 /* Outer size of the button box */
+  width: 48px;                
   height: 48px;
   background: hsla(228, 99%, 58%, 1); /* Your exact blue color */
   border: none;
@@ -162,6 +167,9 @@ nav {
   font-size: 2.5rem;
   font-weight: 600;
   line-height: 1;
+  text-align: right;          
+  flex: 1;                     
+  font-variant-numeric: tabular-nums;
 }
 
 .stat-label {
@@ -235,4 +243,11 @@ footer {
 
 #menu ul {    
     list-style-type: none;
+}
+
+.topsection, .bottomsection {
+  grid-column: 2 / 3;
+  display: grid;
+  /* Change this line! */
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); 
 }
